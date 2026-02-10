@@ -1,0 +1,36 @@
+Implement importing of user defined modules using Magic Methods
+# math_operations.py
+
+class MathOperations:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    def add(self):
+        return self.a + self.b
+
+    def subtract(self):
+        return self.a - self.b
+
+    def multiply(self):
+        return self.a * self.b
+
+    def divide(self):
+        if self.b != 0:
+            return self.a / self.b
+        else:
+            return "Division by zero is not allowed."
+
+    def __str__(self):
+        return f"Math Operations: a = {self.a}, b = {self.b}"
+# main.py
+
+# Importing the custom modules
+from math_operations import MathOperations
+
+# 1. Using MathOperations class
+math_op = MathOperations(10, 5)
+print(math_op)  # Calls the __str__ method
+print(f"Addition: {math_op.add()}")
+print(f"Subtraction: {math_op.subtract()}")
+print(f"Multiplication: {math_op.multiply()}")
+print(f"Division: {math_op.divide()}")
