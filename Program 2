@@ -1,0 +1,46 @@
+# List operations
+print(".......List Operations..........")
+my_list = [1, 2, 3, 4, 5]
+# 1. Append an element to a list
+my_list.append(6)
+print("After append: ", my_list)
+
+# 2. Remove an element from the list
+my_list.remove(2)
+print("After remove: ", my_list)
+
+# 3. Extend the list with another list
+my_list.extend([7, 8, 9])
+print("After extend: ", my_list)
+
+# 4. Insert an element at a specific position
+my_list.insert(3, 10)  # Insert 10 at index 3
+print("After insert: ", my_list)
+
+# 5. Sort the list
+my_list.sort()
+print("After sort: ", my_list)
+
+# 6. Reverse the list
+my_list.reverse()
+print("After reverse: ", my_list)
+# Set operations
+print(".......Set Operations..........")
+my_set = {1, 2, 3, 4, 5}
+
+# 7. Add an element to a set
+my_set.add(6)
+print("After add: ", my_set)
+
+# 8. Remove an element from the set
+my_set.discard(3)  # discard will not raise an error if the element does not exist
+print("After discard: ", my_set)
+
+# 9. Perform union of two sets
+my_set2 = {4, 5, 6, 7, 8}
+union_set = my_set.union(my_set2)
+print("Union: ", union_set)
+
+# 10. Perform intersection of two sets
+intersection_set = my_set.intersection(my_set2)
+print("Intersection: ", intersection_set)
