@@ -4,6 +4,7 @@ S = "Hello, World!"
 print(f"Length of string: { len(S)}")
 print(f"String in uppercase: { S.upper()}")
 print(f"String in lowercase: { S.lower()}")
+print(S.capitalize())
 print(f"Count of 'l' in string: { S.count('l')}")
 print(f"Does string contain 'Hello'? {'Hello' in S }")
 print(f"Position of 'World': { S.find('World')}")
@@ -11,6 +12,11 @@ print(f"Reversed string: { S[::-1]}")
 print(f"Split string: { S.split(', ')}")
 print(f"Trimmed string(string with removed white space): {S.strip()}")
 print(f"Replaced string: { S.replace('World', 'Python')}")
+print(S.isalpha())
+print(S.isdigit())
+print(S.isalnum())
+print(S.startswith("hello"))
+print(S.endswith("world"))
 
 # Tuple Operations
 
@@ -41,3 +47,8 @@ print(f"Repeated tuple: {repeated_tuple}")
 # 10. Unpack a tuple = Unpack the elements of a tuple into variables.
 a, b, c, d, e = t
 print(f"Unpacked values: {a}, {b}, {c}, {d}, {e}")
+
+#11 convert list to tuple 
+lst = [1, 2, 3]
+t3 = tuple(lst)
+print(t3)
