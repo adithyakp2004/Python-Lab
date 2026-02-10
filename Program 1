@@ -1,5 +1,4 @@
 print(“-----------String Operations---------“)
-S=input(“ enter the string”)
 S = "Hello, World!"
 
 print(f"Length of string: { len(S)}")
