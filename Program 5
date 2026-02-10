@@ -1,0 +1,53 @@
+ Single Inheritance
+In single inheritance, one class (child) inherits from one parent class.
+# Parent class
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} makes a sound.")
+
+# Child class inheriting from Animal
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)  # Calling parent constructor
+        self.breed = breed
+    def speak(self):
+        print(f"{self.name} barks.")
+
+# Creating an object of Dog
+dog = Dog("Rex", "Golden Retriever")
+dog.speak()  # Calls the overridden method in Dog class
+
+Multiple Inheritance
+
+# Parent class 1
+class Vehicle:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+    def display_vehicle(self):
+        print(f"Vehicle: {self.make} {self.model}")
+
+# Parent class 2
+class Engine:
+    def __init__(self, engine_type):
+        self.engine_type = engine_type
+
+    def display_engine(self):
+        print(f"Engine: {self.engine_type} engine")
+# Child class inheriting from both Vehicle and Engine
+class Car(Vehicle, Engine):
+    def __init__(self, make, model, engine_type):
+        Vehicle.__init__(self, make, model)
+Engine.__init__(self, engine_type)
+
+    def display(self):
+        self.display_vehicle()
+        self.display_engine()
+
+# Creating an object of Car
+car = Car("Toyota", "Corolla", "V6")
+car.display()
