@@ -10,13 +10,13 @@ print(f"Does string contain 'Hello'? {'Hello' in S }")
 print(f"Position of 'World': { S.find('World')}")
 print(f"Reversed string: { S[::-1]}")
 print(f"Split string: { S.split(', ')}")
-print(f"Trimmed string(string with removed white space): {S.strip()}")
+print(f"Trimmed string(string with removed white space): {S.strip("?! ")}")
 print(f"Replaced string: { S.replace('World', 'Python')}")
 print(S.isalpha())
 print(S.isdigit())
 print(S.isalnum())
-print(S.startswith("hello"))
-print(S.endswith("world"))
+print(S.startswith("Hello"))
+print(S.endswith("World!"))
 
 # Tuple Operations
 
