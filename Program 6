@@ -25,3 +25,25 @@ math_op = MathOperations()
 print(math_op.add(2, 3)) 
 print(math_op.add(2, 3, 4)) 
 print(math_op.add(2, 3, 4, 5, 6))
+
+2. Operator Overloading
+Python allows you to override operators to provide custom behaviour when operators like +, -, *, etc., are used with objects of a custom class. This is known as operator overloading.
+
+Example 1: Overloading the + Operator
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    # Overloading the + operator
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+
+    def __str__(self):
+        return f"Point({self.x}, {self.y})"
+
+# Creating two Point objects
+point1 = Point(2, 3)
+point2 = Point(4, 5)
+# Using the overloaded + operator
+result = point1 + point2
+print(result)
