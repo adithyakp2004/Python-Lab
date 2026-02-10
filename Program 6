@@ -1,0 +1,27 @@
+1. Simulating Method Overloading using Default Arguments
+class MathOperations:
+    def add(self, a, b=0, c=0):
+        return a + b + c
+
+# Creating an object of MathOperations
+math_op = MathOperations()
+
+# Adding two numbers
+print(math_op.add(2, 3)) 
+
+# Adding three numbers
+print(math_op.add(2, 3, 4))
+
+print(math_op.add(2))
+
+2.Method Overloading Using *args
+
+class MathOperations:
+    def add(self, *args):
+        return sum(args)
+math_op = MathOperations()
+
+# Adding multiple numbers
+print(math_op.add(2, 3)) 
+print(math_op.add(2, 3, 4)) 
+print(math_op.add(2, 3, 4, 5, 6))
