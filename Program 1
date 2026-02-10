@@ -1,0 +1,44 @@
+print(“-----------String Operations---------“)
+S=input(“ enter the string”)
+S = "Hello, World!"
+
+print(f"Length of string: { len(S)}")
+print(f"String in uppercase: { S.upper()}")
+print(f"String in lowercase: { S.lower()}")
+print(f"Count of 'l' in string: { S.count('l')}")
+print(f"Does string contain 'Hello'? {'Hello' in S }")
+print(f"Position of 'World': { S.find('World')}")
+print(f"Reversed string: { S[::-1]}")
+print(f"Split string: { S.split(', ')}")
+print(f"Trimmed string(string with removed white space): {S.strip()}")
+print(f"Replaced string: { S.replace('World', 'Python')}")
+
+# Tuple Operations
+
+t = (1, 2, 3, 4, 5)
+print(f"Length of tuple: { len(t)}")
+print(f"Second element in tuple: { t[1]}")
+print(f"Count of 2 in tuple: { t.count(2)}")
+print(f"Index of 4 in tuple: { t.index(4)}")
+# 5. Concatenate two tuples
+t2 = (6, 7, 8)
+concatenated_tuple = t + t2
+print(f"Concatenated tuple: {concatenated_tuple}")
+
+print(f"Sliced tuple (from index 1 to 3): { t[1:4]}")
+
+# 7. Check if an element exists in the tuple
+contains_3 = 3 in t
+print(f"Does tuple contain 3? {contains_3}")
+
+# 8. Create a tuple with a single element
+single_element_tuple = (10,)
+print(f"Single element tuple: {single_element_tuple}")
+
+# 9. Repeat a tuple multiple times
+repeated_tuple = t * 2
+print(f"Repeated tuple: {repeated_tuple}")
+
+# 10. Unpack a tuple = Unpack the elements of a tuple into variables.
+a, b, c, d, e = t
+print(f"Unpacked values: {a}, {b}, {c}, {d}, {e}")
