@@ -1,18 +1,22 @@
 try:
     with open("data.txt", "r") as f:
-        line = f.readline().strip()
+        line = f.read()
         
         # 2. ValueError: e.g., if 'line' contains "abc" instead of "123"
         number = int(line) 
         print(f"Number from file: {number}")
+    if len(content) > 1000:
+            raise FileTooLargeError("File is too large to process.")
 
-    # 3. Handling Multiple Exceptions (Tuple)
 except (FileNotFoundError, PermissionError) as e:
     print(f"File System Error: {e}")
 
 except ValueError:
     # 4. Specific handling for data conversion errors
     print("Value Error: File content is not a valid number.")
+
+except FileTooLargeError as e:
+    print(f"Custom Error: {e}")
 
 else:
     print("Success: File read and value converted perfectly.")
