@@ -1,18 +1,22 @@
+
+class FileTooLargeError(Exception): pass
+
 try:
     with open("data.txt", "r") as f:
-        line = f.read()
+        content = f.read()
         
-        # 2. ValueError: e.g., if 'line' contains "abc" instead of "123"
-        number = int(line) 
+        # ValueError check
+        number = int(content) 
         print(f"Number from file: {number}")
-    if len(content) > 1000:
+
+        # Custom Error check
+        if len(content) > 1000:
             raise FileTooLargeError("File is too large to process.")
 
 except (FileNotFoundError, PermissionError) as e:
     print(f"File System Error: {e}")
 
 except ValueError:
-    # 4. Specific handling for data conversion errors
     print("Value Error: File content is not a valid number.")
 
 except FileTooLargeError as e:
