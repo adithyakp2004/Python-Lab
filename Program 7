@@ -1,0 +1,14 @@
+class Vehicle:
+    def __init__(self, name):
+        self.name = name
+
+    def start(self):
+        print(f"{self.name} is starting with a generic method.")
+
+class Car(Vehicle):
+    def __init__(self, name, model):
+        super().__init__(name) 
+        self.model = model
+
+    def start(self):
+        print(f"The {self.name} {self.model} is starting with a car-specific method.")
