@@ -1,0 +1,21 @@
+import sqlite3
+
+db = sqlite3.connect("office.db")
+cur = db.cursor()
+cur.execute("CREATE TABLE IF NOT EXISTS emp(id INT, name TEXT, dept TEXT)")
+
+cur.execute("INSERT INTO emp VALUES(101, 'Amit', 'IT')")
+cur.execute("INSERT INTO emp VALUES(102, 'Sumit', 'HR')")
+cur.execute("INSERT INTO emp VALUES(103, 'Raj', 'Sales')")
+db.commit()
+
+cur.execute("SELECT * FROM emp WHERE id=102")
+print("Search Result (102):", cur.fetchone())
+
+cur.execute("SELECT * FROM emp")
+rows = cur.fetchall()
+print("\nFinal Employee List:")
+for row in rows:
+    print(row)
+
+db.close()
