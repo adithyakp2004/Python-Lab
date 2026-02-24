@@ -15,7 +15,7 @@ print("Search Result (102):", cur.fetchone())
 cur.execute("SELECT * FROM emp")
 rows = cur.fetchall()
 print("\nFinal Employee List:")
-for row in rows:
-    print(row)
+for i in rows:
+    print(i)
 
 db.close()
